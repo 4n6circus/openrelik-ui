@@ -534,7 +534,9 @@ export default {
     isSqlFormat() {
       const magicText = this.file.magic_text.toLowerCase();
       const containsSqlDb =
-        magicText.includes("sqlite") || magicText.includes("duckdb");
+        magicText.includes("sqlite") ||
+        magicText.includes("duckdb") ||
+        magicText.includes("parquet");
       return containsSqlDb;
     },
     allowedPreview() {
